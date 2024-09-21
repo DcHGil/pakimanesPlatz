@@ -7,20 +7,43 @@
     <script>
             //1 piedra, 2 papel, 3 tijera 
             let jugador = 0
-            let pc = 0
+            let pc = 3
             jugador = prompt("Elije 1 piedra, 2 papel 3 tijera")
-            if (jugador == 1) { jugador = "piedra"
+            if (jugador == 1) { jugador = "🪨"
                 
-            } else if (jugador == 2){ jugador = "papel"
+            } else if (jugador == 2){ jugador = "📄"
                 
-            } else if (jugador == 3){ jugador = "piedra"
+            } else if (jugador == 3){ jugador = "✂️"
                 
             } else { jugador = "perder"
 
             }
+            alert("Elegiste " + jugador)
+           
+            // Logica Pc 
+            if (pc == 1) { pc = "🪨"
+                
+            } else if (pc == 2){ pc = "📄"
+                
+            } else if (pc == 3){ pc = "✂️"
+
+            }
             
+            alert("Pc eligio " + pc)
             
-            alert("Elejiste " + jugador)
+            //combate
+            if (jugador == pc) {
+                alert("Empate");
+            } else if (jugador == "🪨" && pc == "✂️") {
+                alert("¡Jugador Gana!");
+            } else if (jugador == "📄" && pc == "🪨") {
+                alert("¡Jugador Gana!");
+            } else if (jugador == "✂️" && pc == "📄") {
+                alert("¡Jugador Gana!");
+            } else {
+                alert("Jugador Pierde");
+            }
+
     </script>
 </head>
 <body>
